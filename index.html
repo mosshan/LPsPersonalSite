@@ -12,60 +12,18 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="components/header.js" type="text/javascript" defer></script>
   </head>
   <body>
-    <div id="canvas">
-      <div id="mobileNav">
-        <div id="mobileNavWrapper" class="wrapper" style="height: 0px; margin-bottom: 10px;">
-          <nav class="main-nav mobileNav" id="mobileLinks">
-            <ul>
-              <li class="baseLink active-link"><a href="/" id="mobileLink">WORK</a></li>
-              <li class="blogLink"><a href="/blog.html" id="mobileLink">PERSONAL INTERESTS</a></li>
-              <li class="aboutLink"><a href="/about.html" id="mobileLink">ABOUT</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div id="mobileMenuLink"><a href= javascript:void(0); onclick="OpenMenu()" >Menu</a></div>
-      </div>
-
-      <header id="header">
-        <div id="logo">
-          <h1 class="logo"><a href="/" id="title">Lauren Paffrath</a></h1>
-          
-        </div>
-        <div id="topNav" data-content-field="navigation">
-          <nav class="main-nav">
-            <ul>
-              <li class="baseLink active-Link"><a href="/" id="deskLink">WORK</a></li>
-              <li class="blogLink"><a href="/blog.html" id="deskLink">PERSONAL INTERESTS</a></li>
-              <li class="aboutLink"><a href="/about.html" id="deskLink">ABOUT</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-    </div>
+    
+      <header-component></header-component>
 
     
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <script>
-      function OpenMenu() {
-        var mobNav = document.getElementById("mobileNavWrapper");
-
-        if (mobNav.style.height === "0px") {
-          mobNav.style.height = "136px";
-          mobNav.style.borderBottom = "1px solid rgb(221, 221, 221)";
-          mobNav.style.marginBottom = "20px";
-        } else {
-          mobNav.style.height = "0px";
-          mobNav.style.borderBottom = "0px solid #ddd"
-          mobNav.style.marginBottom = "10px";
-        }
-      }
-      
-    </script>
 
   </body>
 </html>
