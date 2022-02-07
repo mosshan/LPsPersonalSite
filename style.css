@@ -58,9 +58,15 @@
   }
 
   .project {
-    align-items: center;
-    padding: 3%;
-    width: 27.3%;
+    width: 44% !important;
+  }
+
+  .project-image img {
+    height: 162px !important;
+  }
+
+  .project-title {
+    padding-top: 10px !important;
   }
 }
 
