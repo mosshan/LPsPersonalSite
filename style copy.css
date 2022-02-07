@@ -56,12 +56,6 @@
     margin: 0;
     padding: 0;
   }
-
-  .project {
-    align-items: center;
-    padding: 3%;
-    width: 27.3%;
-  }
 }
 
 @media only screen and (min-width: 750px) {
@@ -69,10 +63,8 @@
     display: none;
   }
   header {
-    margin-top: 75px;
-    margin-left: 75px;
-    margin-right: 75px;
-    margin-bottom: 10px;
+    margin-top: 70px;
+    margin-bottom: 40px;
   }
 
   #canvas {
@@ -137,19 +129,25 @@ body {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   margin: auto;
-  width: 99%;
+  width: 90%
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
 }
 
 .project {
   align-items: center;
   padding: 3%;
-  width: 27.3%;
 }
 
-.project-image img {
-  width: 100%;
+
+.project-image img{
+  width:100%;
   height: 376px;
   object-fit: cover;
 }
