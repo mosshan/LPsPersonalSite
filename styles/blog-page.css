@@ -58,7 +58,6 @@
 
 p{
   line-height: 1.8em;
-  margin-bottom:5px;
 }
 
 .container{
@@ -74,6 +73,7 @@ p{
 
 .date{
   color: rgba(153, 153, 153, 0.7);
+  margin-top: 0px;
 }
 img{
   margin-top:40px;

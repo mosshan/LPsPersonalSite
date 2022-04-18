@@ -21,22 +21,18 @@
   }
 
   p{
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.8em;
     font-weight: 300;
   }
-  
-  h1{
-    font-size: 30px;
-    text-decoration: none;
-    font-weight: 300;
-  }
+
+
 }
 
 /* settings for screens larger than 1150*/
 @media only screen and (min-width: 1150px) {
   .area{
-    padding-top: 50px;
+    padding-top: 90px;
   }
   
   .container{
@@ -59,11 +55,6 @@
     font-weight: 300;
   }
   
-  h1{
-    font-size: 45px;
-    text-decoration: none;
-    font-weight: 300;
-  }
 }
 
 .area{
