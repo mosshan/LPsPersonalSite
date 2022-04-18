@@ -21,8 +21,8 @@ class Header extends HTMLElement {
           <nav class="main-nav mobileNav" id="mobileLinks">
             <ul>
               <li id="baseLink"><a href="/" class="mobileLink">WORK</a></li>
-              <li id="blogLink"><a href="/blog.html" class="mobileLink">PERSONAL INTERESTS</a></li>
-              <li id="aboutLink"><a href="/about.html" class="mobileLink">ABOUT</a></li>
+              <li id="blogLink"><a href="/blog/post1/index.html" class="mobileLink">PERSONAL INTERESTS</a></li>
+              <li id="aboutLink"><a href="/about/index.html" class="mobileLink">ABOUT</a></li>
             </ul>
           </nav>
         </div>
@@ -38,8 +38,8 @@ class Header extends HTMLElement {
           <nav class="main-nav desktopNav">
             <ul>
               <li class="deskLink"><a href="/" id="baseLink" >WORK</a></li>
-              <li class="deskLink"><a href="/blog.html" id="blogLink" >PERSONAL INTERESTS</a></li>
-              <li class="deskLink"><a href="/about.html" id="aboutLink" >ABOUT</a></li>
+              <li class="deskLink"><a href="/blog/post1/index.html" id="blogLink" >PERSONAL INTERESTS</a></li>
+              <li class="deskLink"><a href="/about/index.html" id="aboutLink" >ABOUT</a></li>
             </ul>
           </nav>
         </div>

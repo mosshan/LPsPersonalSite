@@ -1,0 +1,33 @@
+
+
+/* settings for screens larger than 1150*/
+@media only screen and (min-width: 1150px) {
+  .preview-image{
+    height: 150px;
+    width: 150px;
+  }
+
+  .area{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  article{
+    display: flex;
+  }
+}
+
+
+h1{
+  font-size: 45px;
+  text-decoration: none;
+  font-weight: 300;
+}
+.blog-link{
+  text-transform: none;
+}
