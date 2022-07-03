@@ -39,6 +39,7 @@
     display: flex;
     width:85%;
     gap: 35px;
+    padding-left: 60px;
   }
 
   .right-half{
@@ -50,9 +51,13 @@
   }
 
   p{
-    font-size: 25px;
+    font-size: 17px;
     line-height: 1.8em;
     font-weight: 300;
+  }
+
+  h2{
+    font-size: 30px;
   }
   
 }

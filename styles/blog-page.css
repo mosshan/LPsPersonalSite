@@ -23,7 +23,7 @@
   }
 
   .blog-title{
-    font-size: 30px;
+    font-size: 20px;
     line-height: .5em !important; 
     font-weight: 300;
   }
@@ -35,23 +35,25 @@
 @media only screen and (min-width: 1150px) {
   .area{
     display: flex;
-    margin-left: 70px;
+    margin-left: 60px;
     width: 80%;
     justify-content: center;
   }
   .container{
     display: flex;
     width: 90%;
+    padding-left: 60px;
     flex-direction: column;
     padding-top: 50px;
   }
 
   p{
-    font-size: 25px;
+    font-size: 17px;
+    line-height: 10%;
   }
 
   .blog-title{
-    font-size: 45px;
+    font-size: 30px;
   }
 
 }
