@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <title>Lauren Paffrath</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/work-pages.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/components/header.js" type="text/javascript" defer></script>
+    <script src="/components/projects.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <header-component></header-component>
+    <div class="page">
+      <div class="area">
+        <div class="container">
+            <div class="left-half">
+              <img class="projPhoto" src="/images/fluxFlow/photo1.jpg">
+              <img class="projPhoto" src="/images/fluxFlow/photo2.jpg">
+              <img class="projPhoto" src="/images/fluxFlow/photo3.jpg">
+              <img class="projPhoto" src="/images/fluxFlow/photo4.png">
+              <img class="projPhoto" src="/images/fluxFlow/photo5.png">
+              <img class="projPhoto" src="/images/fluxFlow/photo6.jpg">
+              <b>Electronics & Code</b>
+              <p>
+                #include &lt;Servo.h&gt;<br>
+                <br>
+                Servo servo3;<br>  
+                Servo servo5;<br>  
+                Servo servo6;<br>  
+                Servo servo9;<br> 
+                <br>
+                void setup() {<br>
+                  &emsp;Serial.begin(9600);
+                  <br>
+                  &emsp;servo3.attach(3);<br>
+                  &emsp;servo5.attach(5);<br>
+                  &emsp;servo6.attach(6);<br>
+                  &emsp;servo9.attach(9);<br>
+                }<br>
+                <br>
+                void loop() {<br>
+                  &emsp;int val0 = analogRead(A0);<br>
+                  &emsp;int val1 = analogRead(A1);<br>
+                  &emsp;int val2 = analogRead(A2);<br>
+                  &emsp;int val3 = analogRead(A3);<br>
+                  <br>
+                  &emsp;Serial.print(val0);<br>
+                  &emsp;Serial.print(",");<br>
+                  &emsp;Serial.print(val1);<br>
+                  &emsp;Serial.print(",");<br>
+                  &emsp;Serial.print(val2);<br>
+                  &emsp;Serial.print(",");<br>
+                  &emsp;Serial.print(val3);<br>
+                  &emsp;Serial.println();<br>
+                <br>
+                  &emsp;//750, val0<br>
+                  &emsp;if(val0 > 650) {<br>
+                  &emsp;&emsp;servo3.write(10);<br>
+                  &emsp;} else{<br>
+                  &emsp;&emsp;servo3.write(100);<br>
+                  &emsp;}<br>
+                <br>
+                  &emsp;//740, val3<br>
+                  &emsp;if(val3 > 740) {<br>
+                  &emsp;&emsp;servo5.write(5);<br>
+                  &emsp;} else{<br>
+                  &emsp;&emsp;servo3.write(90);<br>
+                  &emsp;}<br>
+                <br>
+                  &emsp;//930 - val 2<br>
+                  &emsp;if(val2 > 930) {<br>
+                  &emsp;&emsp;servo6.write(10);<br>
+                  &emsp;} else{<br>
+                  &emsp;&emsp;servo6.write(110);<br>
+                  &emsp;}<br>
+                <br>
+                  &emsp;//val1 - 650<br>
+                  &emsp;if(val1 > 650) {<br>
+                  &emsp;&emsp;servo9.write(10);<br>
+                  &emsp;} else{<br>
+                  &emsp;&emsp;servo9.write(100);<br>
+                  &emsp;}<br>
+                  &emsp;delay(15);<br>
+                }
+                </p>
+            </div>
+            <div class="right-half">
+              <h2>FLUX FLOW</h2>
+              <p><i>with Amelia Donalson</i></p>
+              <p>Flux Flow creates a direct communication between a person’s presence and specific room air conditioning. As a person travels between rooms, the air is transferred to their location from the fan unit. The location sensors are calculating the light presence in the room. I wired the connection between the light sensors and air ducts to turn the panels. My partner incorporated in the design aspect. This idea allows the air unit to save energy, while money for the people owning the house. The transfer of air maintains a continuous airflow throughout the house.</p>
+            </div>
+        </div>
+      </div>
+    
+      <p style="text-align:left;">
+        <a href="/index.html">Back to Work</a>
+        <span style="float:right;">
+          <a href="/projectPages/interactiveChess/index.html">prev</a> / <a href="/projectPages/solidworkPrints/index.html">next</a>
+        </span>
+      </p>
+    </div>
+    <project-squares></project-squares>
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+
+  </body>
+</html>

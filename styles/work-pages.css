@@ -44,7 +44,11 @@
   
   .right-half{
     padding: 20px;
-    margin-left: 30px;
+  }
+
+  .projPhoto{
+    max-width: 100%;
+    min-width: 650px;
   }
 
 }
@@ -59,6 +63,10 @@ p{
   font-size: 17px;
   line-height: 1.8em;
   font-weight: 300;
+}
+
+ul{
+  text-transform: none;
 }
 
 
