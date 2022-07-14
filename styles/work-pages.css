@@ -47,8 +47,8 @@
   }
 
   .projPhoto{
-    max-width: 100%;
-    min-width: 650px;
+    max-width: 90%;
+    min-width: 200px;
   }
 
 }
