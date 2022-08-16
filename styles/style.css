@@ -86,7 +86,7 @@
 
   #canvas {
     margin: 10px auto;
-    padding: 75px;
+    padding: 40px;
   }
 
   body {
@@ -160,18 +160,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  width: 99%;
+  width: 80%;
 }
 
 .project {
   align-items: center;
-  padding: 3%;
-  width: 27.3%;
+  padding: 15px;
+  width: 29.5%;
 }
 
 .project-image img {
   width: 100%;
-  height: 376px;
+  height: 200px;
   object-fit: cover;
 }
 

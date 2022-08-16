@@ -26,11 +26,13 @@
 /* settings for screens larger than 1150*/
 @media only screen and (min-width: 1150px) {
   .area{
-    padding-top: 90px;
+    padding-top: 60px;
   }
   
   .container{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .page{
@@ -40,15 +42,19 @@
   .left-half{
     padding: 20px;
     margin-bottom: 10px;
+    max-width: 50%;
   }
   
   .right-half{
     padding: 20px;
+    margin-bottom: 10px;
+    max-width: 50%;
   }
 
   .projPhoto{
-    max-width: 90%;
-    min-width: 200px;
+    width: 90%;
+    height: 300px;
+    object-fit: cover;
   }
 
 }
