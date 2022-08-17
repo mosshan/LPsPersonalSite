@@ -72,6 +72,17 @@
   h2{
     font-size: 30px;
   }
+
+  .project {
+    align-items: center;
+    padding: 14px;
+  }
+  
+  .project-image img {
+    width: 110%;
+    height: 100px;
+    object-fit: cover;
+  }
 }
 
 @media only screen and (min-width: 1150px) {
@@ -116,6 +127,19 @@
 
   h2{
     font-size: 45px;
+  }
+
+
+  .project {
+    align-items: center;
+    padding: 15px;
+    width: 29.5%;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
 }
 
@@ -163,17 +187,7 @@ body {
   width: 80%;
 }
 
-.project {
-  align-items: center;
-  padding: 15px;
-  width: 29.5%;
-}
 
-.project-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
 
 .project-title {
   padding-top: 30px;
