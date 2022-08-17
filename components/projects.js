@@ -7,6 +7,13 @@ class Projects extends HTMLElement {
     this.innerHTML = `
     <div class="projects">
       <div class="row">
+          <a class="project" href="/projectPages/newPage/">
+            <div class="project-image">
+              <img src="/images/designer/digitalDessertImage.jpg"  dimensions="1741x1286">
+            </div>
+            <div class="project-title">Title</div>
+          </a>
+
           <a class="project" href="/projectPages/digitalDessertDesigner/">
             <div class="project-image">
               <img src="/images/designer/digitalDessertImage.jpg"  dimensions="1741x1286">
