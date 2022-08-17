@@ -1,12 +1,11 @@
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 300px){
   .project {
-    width: 39% !important;
-    padding: 20px !important;
-    padding-left: 15px !important;
+    width: 100% !important;
+    padding: 10px !important;
+    padding-right: 20px !important;
   }
-
   .project-image img {
-    height: 90px;
+    height: 100px !important;
   }
 
   .project-title {
@@ -14,8 +13,35 @@
   }
 }
 
+@media only screen and (min-width:300px) and (max-width: 650px){
+  .project {
+    width: 40%;
+    padding: 15px;
+    padding-left: 15px;
+  }
+  .project-title {
+    font-size: 12px;
+  }
+}
 
-@media only screen and (max-width: 1150px){
+@media only screen and (min-width: 650px) and (max-width: 950px){
+
+  .project {
+    padding: 20px;
+    padding-left: 30px;
+    width: 39%;
+  }
+}
+@media only screen and (min-width: 950px) and (max-width: 1150px){
+
+  .project {
+    padding: 20px;
+    padding-left: 40px;
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1150px){
   #topNav {
     display: none;
   }
@@ -84,15 +110,12 @@
 
   .project {
     align-items: center;
-    padding: 20px;
-    padding-left: 30px;
-    width: 40%;
   }
   
   .project-image img {
     width: 110%;
-    height: 162px;
     object-fit: cover;
+    height: 162px;
   }
 }
 
