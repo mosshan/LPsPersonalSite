@@ -5,5 +5,5 @@ This site base was built for a friend as a recreation of her Squarespace. To ena
 <br><br>
 Deployment Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/7a945dee-f31a-400a-9354-3c88695025bc/deploy-status)](https://app.netlify.com/sites/lpspersonalsite/deploys)
 <br><br>
-The site is viewable at https://lpspersonalsite.netlify.app/ & https://mosshan.github.io/
+The site is viewable at https://lpspersonalsite.netlify.app/
 
