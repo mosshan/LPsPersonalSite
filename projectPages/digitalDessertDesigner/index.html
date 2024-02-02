@@ -19,79 +19,93 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
-        <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/designer/digitalDessertImage.jpg">
-              <img class="projPhoto" src="/images/designer/funct_diagram.png">
-              <img class="projPhoto" src="/images/designer/drawing_example.png">
-              <img class="projPhoto" src="/images/designer/electronic_diagrams.png">
-              <p>
-                const int buttonPin2 = 2;<br>
-                const int buttonPin3 = 3;<br>  
-                const int servoPin =  9;<br><br>
-                
-                // variables will change:<br>
-                int button2State = 0;         // variable for reading the pushbutton status<br>
-                int button3State = 0;         // variable for reading the pushbutton status<br>
-                <br>
-                #include &lt;Servo.h&gt;<br>
-                Servo myservo;  <br>
-                int pos = 0;  <br>
-                <br>
-                void setup() {<br>
-                  &emsp;myservo.attach(9);<br>
-                  &emsp;pinMode(buttonPin2, INPUT);<br>
-                  &emsp;pinMode(buttonPin3, INPUT);<br>
-                }<br>
-                <br>
-                void loop() {<br>
-                  &emsp;// read the state of the pushbutton value:<br>
-                  &emsp;button2State = digitalRead(buttonPin2);<br>
-                  &emsp;button3State = digitalRead(buttonPin3);<br>
-                <br>
-                  &emsp;if (button2State == LOW) {<br>
-                  &emsp;&emsp;// turn servo on:<br>
-                  &emsp;&emsp;for (pos = 0; pos <= 45; pos += 1) {<br>
-                  &emsp;&emsp; &emsp;myservo.write(pos);<br>             
-                  &emsp;&emsp; &emsp;delay(40);<br>                
-                  &emsp;&emsp; }<br>
-                  &emsp;&emsp;for (pos = 45; pos >= 0; pos -= 1) {<br>
-                  &emsp;&emsp; &emsp;myservo.write(pos);<br>           
-                  &emsp;&emsp;&emsp;delay(40);<br>                     
-                  &emsp;&emsp; }<br>
-                  &emsp;} else {<br>
-                  &emsp;&emsp;// turn LED off:<br>
-                  &emsp;&emsp;myservo.write(0);<br>
-                  &emsp;}<br>
-                  &emsp;// read the state of the pushbutton value:<br>
-                  &emsp;button2State = digitalRead(buttonPin2);<br>
-                  &emsp;button3State = digitalRead(buttonPin3);<br>
-                  &emsp;if (button3State == LOW) {<br>
-                  &emsp;&emsp;// turn servo on:<br>
-                  &emsp;&emsp;for (pos = 0; pos <= 45; pos += 1) {<br>
-                  &emsp;&emsp;&emsp;myservo.write(pos);<br>              
-                  &emsp;&emsp;&emsp;delay(15);<br>                      
-                  &emsp;&emsp;}<br>
-                  &emsp;&emsp;for (pos = 45; pos >= 0; pos -= 1) {<br>
-                  &emsp;&emsp;&emsp;myservo.write(pos);<br>              
-                  &emsp;&emsp;&emsp;delay(15);<br>                      
-                  &emsp;&emsp;}<br>
-                  &emsp;} else {<br>
-                  &emsp;&emsp;// turn LED off:<br>
-                  &emsp;&emsp;myservo.write(0);<br>
-                  &emsp;}<br>
-                }</p>
+    <div class="container">
+        <div class="column">
+          <div class="galleryContainer">
+            <div class="image-container">
+              <img class="projPhoto" id="galleryImage" src="/images/designer/digitalDessertImage.jpg">
             </div>
-            <div class="right-half">
-              <h2>DIGITAL DESSERT DESIGNER</h2>
-              <p><i>with Walter Mattson</i></p>
-              <p>Digital Dessert Designer is a tool that allows chefs to print complex designs and patterns on cakes, cookies, and other decoratable foods. This culinary 3d printer has an extruder attached to a servo motor, which moves in a radial motion. The user of the DDD programs the speed of the extruder’s movement and controls the rate of extrusion. Together, my partner and I built an innovative culinary experience.</p>
+            <div class="imageNavButtons">
+              <button onclick="gallery.prevImage()">Previous</button>
+              <button onclick="gallery.nextImage()" style="float:right;">Next</button>
             </div>
+          </div>
         </div>
-      </div>
-    
+        <div class="column">
+          <h2>DIGITAL DESSERT DESIGNER</h2>
+          <p><i>with Walter Mattson</i></p>
+          <p>Digital Dessert Designer is a tool that allows chefs to print complex designs and patterns on cakes, cookies, and other decoratable foods. This culinary 3d printer has an extruder attached to a servo motor, which moves in a radial motion. The user of the DDD programs the speed of the extruder’s movement and controls the rate of extrusion. Together, my partner and I built an innovative culinary experience.</p>
+          <button type="button" class="collapsible">View the Code:</button>
+          <div class="codeBlock">
+            <pre>
+            <code>
+            const int buttonPin2 = 2;
+            const int buttonPin3 = 3;
+            const int servoPin =  9;<br>
+            // variables will change:
+            // variable for reading the pushbutton status
+            int button2State = 0;
+            // variable for reading the pushbutton status
+            int button3State = 0;
+
+            #include &lt;Servo.h&gt;
+            Servo myservo;
+            int pos = 0;
+
+            void setup() {
+              &emsp;myservo.attach(9);
+              &emsp;pinMode(buttonPin2, INPUT);
+              &emsp;pinMode(buttonPin3, INPUT);
+            }
+
+            void loop() {
+              &emsp;// read the state of the pushbutton value:
+              &emsp;button2State = digitalRead(buttonPin2);
+              &emsp;button3State = digitalRead(buttonPin3);
+
+              &emsp;if (button2State == LOW) {
+              &emsp;&emsp;// turn servo on:
+
+              &emsp;&emsp;for (pos = 0; pos <= 45; pos += 1) {
+              &emsp;&emsp; &emsp;myservo.write(pos);            
+              &emsp;&emsp; &emsp;delay(40);             
+              &emsp;&emsp; }
+
+              &emsp;&emsp;for (pos = 45; pos >= 0; pos -= 1) {
+              &emsp;&emsp; &emsp;myservo.write(pos);     
+              &emsp;&emsp;&emsp;delay(40);                   
+              &emsp;&emsp; }
+              &emsp;} else {
+              &emsp;&emsp;// turn LED off:
+              &emsp;&emsp;myservo.write(0);
+              &emsp;}
+
+              &emsp;// read the state of the pushbutton value:
+              &emsp;button2State = digitalRead(buttonPin2);
+              &emsp;button3State = digitalRead(buttonPin3); 
+
+              &emsp;if (button3State == LOW) {
+              &emsp;&emsp;// turn servo on:
+              &emsp;&emsp;for (pos = 0; pos <= 45; pos += 1) {
+              &emsp;&emsp;&emsp;myservo.write(pos);            
+              &emsp;&emsp;&emsp;delay(15);                    
+              &emsp;&emsp;}
+
+              &emsp;&emsp;for (pos = 45; pos >= 0; pos -= 1) {
+              &emsp;&emsp;&emsp;myservo.write(pos);            
+              &emsp;&emsp;&emsp;delay(15);                    
+              &emsp;&emsp;}
+              &emsp;} else {
+              &emsp;&emsp;// turn LED off:
+              &emsp;&emsp;myservo.write(0);
+              &emsp;}
+            }
+            </code>
+            </pre>
+          </div>
+        </div>
+    </div>
+    <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -105,6 +119,14 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/designer/digitalDessertImage.jpg','/images/designer/funct_diagram.png','/images/designer/drawing_example.png','/images/designer/electronic_diagrams.png'];
+    
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
 
   </body>
 </html>

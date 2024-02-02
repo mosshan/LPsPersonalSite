@@ -25,37 +25,67 @@
 
 /* settings for screens larger than 1150*/
 @media only screen and (min-width: 1150px) {
-  .area{
-    padding-top: 60px;
-  }
-  
   .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-auto-flow:column;
+    grid-auto-columns: 1fr;
+    padding:20px;
+    margin:auto;
+    width:90%;
   }
 
-  .page{
+  .pageNav{
     margin-right: 120px;
     margin-left: 120px;
   }
-  .left-half{
-    padding: 20px;
-    margin-bottom: 10px;
-    max-width: 50%;
-  }
-  
-  .right-half{
-    padding: 20px;
-    margin-bottom: 10px;
-    max-width: 50%;
+
+  .column{
+    padding: 10px;
+    margin: 0 10px;
   }
 
-  .projPhoto{
-    width: 90%;
-    height: 300px;
-    object-fit: cover;
+  .projPhoto {
+    width: auto;
+    max-width:100%;
+    height:400px;
+    display: block;
   }
+  
+
+  .imageNavButtons{
+    margin: 10px;
+    display: grid;
+    grid-auto-flow:column;
+    grid-auto-columns: 1fr;
+    gap:20px;
+    
+  }
+  .galleryContainer{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+  }
+}
+
+body{
+  padding-left:2%;
+  padding-right:2%;
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+}
+
+.codeBlock{
+  display: none;
+}
+
+button{
+  border: none;
+  padding: 12px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  background-color: rgb(232, 240, 247);
 
 }
 
@@ -74,5 +104,7 @@ p{
 ul{
   text-transform: none;
 }
+
+
 
 

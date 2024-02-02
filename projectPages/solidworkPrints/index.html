@@ -19,26 +19,26 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
-        <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/solidworkPrints/photo1.jpg">
-              <p><b>UCF Model</b></p>
-              <img class="projPhoto" src="/images/solidworkPrints/photo2.jpg">
-              <p><b>3D Prints</b></p>
-              <img class="projPhoto" src="/images/solidworkPrints/photo3.png">
-              <p><b>Knightro Model</b></p>
-              <img class="projPhoto" src="/images/solidworkPrints/photo4.jpg">
-              <p><b>Theta Tau Model</b></p>
+
+    <div class="container">
+        <div class="column">
+          <div class="galleryContainer">
+            <div class="image-container">
+              <img class="projPhoto" id="galleryImage" src="/images/solidworkPrints/photo1.jpg">
             </div>
-            <div class="right-half">
-              <h2>SOLIDWORK PRINTS</h2>
-              <p>A personal project to explore Solidwork modeling and 3D printing.</p>
+            <div class="imageNavButtons">
+              <button onclick="gallery.prevImage()">Previous</button>
+              <button onclick="gallery.nextImage()" style="float:right;">Next</button>
             </div>
+          </div>
         </div>
-      </div>
-    
+        <div class="column">
+          <h2>SOLIDWORK PRINTS</h2>
+          <p>A personal project to explore Solidwork modeling and 3D printing.</p>
+        </div>
+    </div>
+
+    <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -52,6 +52,13 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/solidworkPrints/photo1.jpg', '/images/solidworkPrints/photo2.jpg', '/images/solidworkPrints/photo3.png','/images/solidworkPrints/photo4.jpg'];
+    
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
   </body>
 </html>

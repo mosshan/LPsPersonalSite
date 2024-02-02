@@ -19,26 +19,28 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
-        <div class="container">
-            <div class="left-half">
-              <img class="projPhoto"  src="/images/blanketClothes.jpg">
-              <img class="projPhoto" src="/images/blanketClothes/photo2.jpg">
-              <img class="projPhoto" src="/images/blanketClothes/photo3.jpg">
-              <img class="projPhoto" src="/images/blanketClothes/photo4.png">
-              <img class="projPhoto" src="/images/blanketClothes/photo5.jpg">
-              <img class="projPhoto" src="/images/blanketClothes/photo6.JPG">
-              <img class="projPhoto" src="/images/blanketClothes/photo7.png">
+
+    <div class="container">
+        <div class="column">
+          <div class="galleryContainer">
+            <div class="image-container">
+              <img class="projPhoto" id="galleryImage" src="/images/blanketClothes.jpg">
             </div>
-            <div class="right-half">
-              <h2>BLANKET CLOTHES</h2>
-              <p><i>with Cambria Gosh</i></p>
-              <p>Blanket Clothes was thought of making a wooden structure to go under the fabric, so the clothes were transformable. I came up with a design to focus on clothes that have multiple functions. Together, my partner and I tried to use multiple materials that were both warm and cold. The double sided material helped keep in warmth, while releasing the sweat. The clothes were on the beginning steps starting at the sleeves to continue to a full jacket.</p>
+            <div class="imageNavButtons">
+              <button onclick="gallery.prevImage()">Previous</button>
+              <button onclick="gallery.nextImage()" style="float:right;">Next</button>
             </div>
+          </div>
         </div>
-      </div>
-    
+        <div class="column">
+          <h2>BLANKET CLOTHES</h2>
+          <p><i>with Cambria Gosh</i></p>
+          <p>Blanket Clothes was thought of making a wooden structure to go under the fabric, so the clothes were transformable. I came up with a design to focus on clothes that have multiple functions. Together, my partner and I tried to use multiple materials that were both warm and cold. The double sided material helped keep in warmth, while releasing the sweat. The clothes were on the beginning steps starting at the sleeves to continue to a full jacket.</p>
+        </div>
+    </div>
+      
+
+    <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -51,7 +53,14 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/blanketClothes.jpg', '/images/blanketClothes/photo2.jpg', '/images/blanketClothes/photo3.jpg','/images/blanketClothes/photo4.png','/images/blanketClothes/photo6.JPG','/images/blanketClothes/photo7.png'];
     
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
 
   </body>
 </html>

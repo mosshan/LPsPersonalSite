@@ -19,26 +19,26 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
         <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/mazeRacing/photo1.jpeg">
-              <p><b>TI-RSLK Robot Model</b></p>
-              <br>
-              <img class="projPhoto" src="/images/mazeRacing/photo2.jpeg">
-              <p><b>Watch the robot maze run!</b></p>
-              <br>
-              <img class="projPhoto" src="/images/mazeRacing/photo3.jpeg">
+            <div class="column">
+              <div class="galleryContainer">
+                <div class="image-container">
+                  <img class="projPhoto" id="galleryImage" src="/images/mazeRacing/photo1.jpeg">
+                </div>
+                <div class="imageNavButtons">
+                  <button onclick="gallery.prevImage()">Previous</button>
+                  <button onclick="gallery.nextImage()" style="float:right;">Next</button>
+                </div>
+              </div>
             </div>
-            <div class="right-half">
+            <div class="column">
               <h2>ROBOT MAZE RACING</h2>
               <p><i>with Trevor Bernstein, Franco Curcio, and Noah Jackson</i></p>
               <p>Robot Maze Racing was a project created for a UCF engineering competition that raced random and unique mazes. Our team of four would receive the course design in less than 5 minutes before running then proceed to code in C language the turns and bumper sensors. Overall, our team placed 3rd in a competition of 350 teams.</p>
             </div>
         </div>
-      </div>
-    
+
+    <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -51,7 +51,14 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/mazeRacing/photo1.jpeg', '/images/mazeRacing/photo2.jpeg', '/images/mazeRacing/photo3.jpeg'];
     
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
 
   </body>
 </html>

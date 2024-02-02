@@ -19,26 +19,27 @@
   </head>
   <body onload="highlightActive()">
     <header-component ></header-component>
-    <div class="page">
-      <div class="area">
         <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/bb8Modeling/photo1.png">
-              <img class="projPhoto" src="/images/bb8Modeling/photo2.png">
-              <p><b>Joystick Mechanism</b></p>
-              <br>
-              <img class="projPhoto" src="/images/bb8Modeling/photo3.jpg">
-              <img class="projPhoto" src="/images/bb8Modeling/photo4.png">
-              <p><b>We hope to obtain a similar BB8 Model</b></p>
+            <div class="column">
+              <div class="galleryContainer">
+                <div class="image-container">
+                  <img class="projPhoto" id="galleryImage" src="/images/bb8Modeling/photo1.png">
+                </div>
+                <div class="imageNavButtons">
+                  <button onclick="gallery.prevImage()">Previous</button>
+                  <button onclick="gallery.nextImage()" style="float:right;">Next</button>
+                </div>
+              </div>
+            
             </div>
-            <div class="right-half">
+            <div class="column">
               <h2>MODELING BB8 MECHANISM</h2>
               <p><i>with Trevor Bernstein</i></p>
               <p>Currently, my partner and I are designing the BB8 Model from Star Wars. These are the beginning steps of 3D modeling, so the approach for building this structure is visually clear. There are some new aspects added in our model such as a joystick mechanism for the head motion and different shapes of the four wheels in the inner circle. We are continuing to build this model!</p>
             </div>
         </div>
-      </div>
-    
+
+    <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -51,7 +52,14 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/bb8Modeling/photo1.png', '/images/bb8Modeling/photo2.png', '/images/bb8Modeling/photo3.jpg','/images/bb8Modeling/photo4.png'];
     
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
 
   </body>
 </html>

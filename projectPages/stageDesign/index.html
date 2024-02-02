@@ -19,21 +19,26 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
-        <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/stageDesign/photo1.JPG">
-              <img class="projPhoto" src="/images/stageDesign/photo2.jpg">
-              <img class="projPhoto" src="/images/stageDesign/photo3.JPG">
+
+    <div class="container">
+        <div class="column">
+          <div class="galleryContainer">
+            <div class="image-container">
+              <img class="projPhoto" id="galleryImage" src="/images/stageDesign/photo1.JPG">
             </div>
-            <div class="right-half">
-              <h2>STAGE DESIGN</h2>
-              <p>My stagecraft class had been building the set for the play <i>Who is Theo?</i>. We have been instructed by a set designer for the dimensions that you can see proportional to the person in the second photo. My group and I built the flat panels on the floor. Then I went up on the ladder to screw in the top window panels, doors, and top panel to secure the walls. The progress is still continuing.</p>
+            <div class="imageNavButtons">
+              <button onclick="gallery.prevImage()">Previous</button>
+              <button onclick="gallery.nextImage()" style="float:right;">Next</button>
             </div>
+          </div>
         </div>
-      </div>
-    
+        <div class="column">
+          <h2>STAGE DESIGN</h2>
+          <p>My stagecraft class had been building the set for the play <i>Who is Theo?</i>. We have been instructed by a set designer for the dimensions that you can see proportional to the person in the second photo. My group and I built the flat panels on the floor. Then I went up on the ladder to screw in the top window panels, doors, and top panel to secure the walls. The progress is still continuing.</p>
+        </div>
+    </div>
+
+    <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -46,7 +51,14 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/stageDesign/photo1.JPG', '/images/stageDesign/photo2.jpg', '/images/stageDesign/photo3.JPG'];
     
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
 
   </body>
 </html>

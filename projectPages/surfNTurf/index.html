@@ -19,22 +19,26 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
         <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/surfNTurf/photo1.JPG">
-              <img class="projPhoto" src="/images/surfNTurf/photo2.JPG">
-              <img class="projPhoto" src="/images/surfNTurf/photo3.JPG">
+            <div class="column">
+              <div class="galleryContainer">
+                <div class="image-container">
+                  <img class="projPhoto" id="galleryImage" src="/images/surfNTurf/photo1.JPG">
+                </div>
+                <div class="imageNavButtons">
+                  <button onclick="gallery.prevImage()">Previous</button>
+                  <button onclick="gallery.nextImage()" style="float:right;">Next</button>
+                </div>
+              </div>
             </div>
-            <div class="right-half">
+            <div class="column">
               <h2>SURF N' TURF</h2>
               <p><i>with my American University Team</i></p>
               <p>My underwater robot allows the driver to obtain objects at the bottom of pools. The net support allowed us to catch all different types of materials, while moving fast with the propellers. I soldered all the wires for my group, but each motor was waterproofed also. I created this project for American University’s contest. Together we worked together to win the contest. The engineering camp website can be found here:  <a href = "https://www.nslcleaders.org/youth-leadership-programs/engineering-summer-programs/">Engineering Summer Program</a></p>
             </div>
         </div>
-      </div>
-    
+
+      <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -47,7 +51,14 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/surfNTurf/photo1.JPG', '/images/surfNTurf/photo2.JPG', '/images/surfNTurf/photo3.JPG'];
     
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
 
   </body>
 </html>

@@ -19,88 +19,91 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
-        <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/fluxFlow/photo1.jpg">
-              <img class="projPhoto" src="/images/fluxFlow/photo2.jpg">
-              <img class="projPhoto" src="/images/fluxFlow/photo3.jpg">
-              <img class="projPhoto" src="/images/fluxFlow/photo4.png">
-              <img class="projPhoto" src="/images/fluxFlow/photo5.png">
-              <img class="projPhoto" src="/images/fluxFlow/photo6.jpg">
-              <b>Electronics & Code</b>
-              <p>
-                #include &lt;Servo.h&gt;<br>
-                <br>
-                Servo servo3;<br>  
-                Servo servo5;<br>  
-                Servo servo6;<br>  
-                Servo servo9;<br> 
-                <br>
-                void setup() {<br>
-                  &emsp;Serial.begin(9600);
-                  <br>
-                  &emsp;servo3.attach(3);<br>
-                  &emsp;servo5.attach(5);<br>
-                  &emsp;servo6.attach(6);<br>
-                  &emsp;servo9.attach(9);<br>
-                }<br>
-                <br>
-                void loop() {<br>
-                  &emsp;int val0 = analogRead(A0);<br>
-                  &emsp;int val1 = analogRead(A1);<br>
-                  &emsp;int val2 = analogRead(A2);<br>
-                  &emsp;int val3 = analogRead(A3);<br>
-                  <br>
-                  &emsp;Serial.print(val0);<br>
-                  &emsp;Serial.print(",");<br>
-                  &emsp;Serial.print(val1);<br>
-                  &emsp;Serial.print(",");<br>
-                  &emsp;Serial.print(val2);<br>
-                  &emsp;Serial.print(",");<br>
-                  &emsp;Serial.print(val3);<br>
-                  &emsp;Serial.println();<br>
-                <br>
-                  &emsp;//750, val0<br>
-                  &emsp;if(val0 > 650) {<br>
-                  &emsp;&emsp;servo3.write(10);<br>
-                  &emsp;} else{<br>
-                  &emsp;&emsp;servo3.write(100);<br>
-                  &emsp;}<br>
-                <br>
-                  &emsp;//740, val3<br>
-                  &emsp;if(val3 > 740) {<br>
-                  &emsp;&emsp;servo5.write(5);<br>
-                  &emsp;} else{<br>
-                  &emsp;&emsp;servo3.write(90);<br>
-                  &emsp;}<br>
-                <br>
-                  &emsp;//930 - val 2<br>
-                  &emsp;if(val2 > 930) {<br>
-                  &emsp;&emsp;servo6.write(10);<br>
-                  &emsp;} else{<br>
-                  &emsp;&emsp;servo6.write(110);<br>
-                  &emsp;}<br>
-                <br>
-                  &emsp;//val1 - 650<br>
-                  &emsp;if(val1 > 650) {<br>
-                  &emsp;&emsp;servo9.write(10);<br>
-                  &emsp;} else{<br>
-                  &emsp;&emsp;servo9.write(100);<br>
-                  &emsp;}<br>
-                  &emsp;delay(15);<br>
-                }
-                </p>
-            </div>
-            <div class="right-half">
-              <h2>FLUX FLOW</h2>
-              <p><i>with Amelia Donalson</i></p>
-              <p>Flux Flow creates a direct communication between a person’s presence and specific room air conditioning. As a person travels between rooms, the air is transferred to their location from the fan unit. The location sensors are calculating the light presence in the room. I wired the connection between the light sensors and air ducts to turn the panels. My partner incorporated in the design aspect. This idea allows the air unit to save energy, while money for the people owning the house. The transfer of air maintains a continuous airflow throughout the house.</p>
-            </div>
+    <div class="container">
+      <div class="column">
+        <div class="galleryContainer">
+          <div class="image-container">
+            <img class="projPhoto" id="galleryImage" src="/images/fluxFlow/photo1.jpg">
+          </div>
+          <div class="imageNavButtons">
+            <button onclick="gallery.prevImage()">Previous</button>
+            <button onclick="gallery.nextImage()" style="float:right;">Next</button>
+          </div>
         </div>
       </div>
-    
+      <div class="column">
+        <h2>FLUX FLOW</h2>
+        <p><i>with Amelia Donalson</i></p>
+        <p>Flux Flow creates a direct communication between a person’s presence and specific room air conditioning. As a person travels between rooms, the air is transferred to their location from the fan unit. The location sensors are calculating the light presence in the room. I wired the connection between the light sensors and air ducts to turn the panels. My partner incorporated in the design aspect. This idea allows the air unit to save energy, while money for the people owning the house. The transfer of air maintains a continuous airflow throughout the house.</p>
+        <button type="button" class="collapsible">View the Code:</button>
+        <div class="codeBlock">
+          <pre>
+          <code>
+          #include &lt;Servo.h&gt; 
+          Servo servo3;
+          Servo servo5;
+          Servo servo6; 
+          Servo servo9;
+            
+          void setup() { 
+            &emsp;Serial.begin(9600);
+            &emsp;servo3.attach(3); 
+            &emsp;servo5.attach(5); 
+            &emsp;servo6.attach(6); 
+            &emsp;servo9.attach(9); 
+          } 
+            
+          void loop() { 
+            &emsp;int val0 = analogRead(A0); 
+            &emsp;int val1 = analogRead(A1); 
+            &emsp;int val2 = analogRead(A2); 
+            &emsp;int val3 = analogRead(A3); 
+              
+            &emsp;Serial.print(val0); 
+            &emsp;Serial.print(","); 
+            &emsp;Serial.print(val1); 
+            &emsp;Serial.print(","); 
+            &emsp;Serial.print(val2); 
+            &emsp;Serial.print(","); 
+            &emsp;Serial.print(val3); 
+            &emsp;Serial.println(); 
+            
+            &emsp;//750, val0 
+            &emsp;if(val0 > 650) { 
+            &emsp;&emsp;servo3.write(10); 
+            &emsp;} else{ 
+            &emsp;&emsp;servo3.write(100); 
+            &emsp;} 
+            
+            &emsp;//740, val3 
+            &emsp;if(val3 > 740) { 
+            &emsp;&emsp;servo5.write(5); 
+            &emsp;} else{ 
+            &emsp;&emsp;servo3.write(90); 
+            &emsp;} 
+            
+            &emsp;//930 - val 2 
+            &emsp;if(val2 > 930) { 
+            &emsp;&emsp;servo6.write(10); 
+            &emsp;} else{ 
+            &emsp;&emsp;servo6.write(110); 
+            &emsp;} 
+            
+            &emsp;//val1 - 650 
+            &emsp;if(val1 > 650) { 
+            &emsp;&emsp;servo9.write(10); 
+            &emsp;} else{ 
+            &emsp;&emsp;servo9.write(100); 
+            &emsp;} 
+            
+            &emsp;delay(15); 
+          }
+          </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -113,7 +116,13 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/fluxFlow/photo1.jpg', '/images/fluxFlow/photo2.jpg','/images/fluxFlow/photo3.jpg','/images/fluxFlow/photo4.png','/images/fluxFlow/photo5.png','/images/fluxFlow/photo6.jpg'];
     
-
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
   </body>
 </html>

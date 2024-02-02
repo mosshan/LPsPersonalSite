@@ -19,28 +19,24 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
-        <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/interactiveChess/photo1.jpg">
-              <img class="projPhoto" src="/images/interactiveChess/photo2.jpg">
-              <p>Individual chess pieces contain ferromagnetic material at the core - iron fillings.</p> 
-              <img class="projPhoto" src="/images/interactiveChess/photo3.jpg">
-              <img class="projPhoto" src="/images/interactiveChess/photo4.jpg">
-              <img class="projPhoto" src="/images/interactiveChess/photo5.png">
-              <img class="projPhoto" src="/images/interactiveChess/photo6.jpg">
-              <img class="projPhoto" src="/images/interactiveChess/photo7.jpg">
-              <p> Raspberry Pi Model B, Protoneer shield RPI_CNC, and stepper drivers (A4988) connected create the electronics to power the chess moves.</p>
-              <img class="projPhoto" src="/images/interactiveChess/photo8.JPG">
+    <div class="container">
+        <div class="column">
+          <div class="galleryContainer">
+            <div class="image-container">
+              <img class="projPhoto" id="galleryImage" src="/images/interactiveChess/photo1.jpg">
             </div>
-            <div class="right-half">
-              <h2>INTERACTIVE CHESS BOARD</h2>
-              <p>The Interactive Chess Board is a game that plays chess. It features a 3D printed robotic arm that reaches down with a solenoid and utilizes the  magnetic field of the solenoid coil to transfer the chess piece around the board. The chess pieces contain ferromagnetic material at the core - iron fillings- which responds to the magnetism. The magnetic field opens a new side to this project, while creating a release mechanism. The project is at the preliminary stages with multiple options to take in the future. Whether it be a coded robotic arm to decide its own moves with AI abilities or a panel control of the robotic arm. The continuation of the project will transfer into the next modules for an innovative experience.</p>
+            <div class="imageNavButtons">
+              <button onclick="gallery.prevImage()">Previous</button>
+              <button onclick="gallery.nextImage()" style="float:right;">Next</button>
             </div>
+          </div>
         </div>
-      </div>
-    
+        <div class="column">
+          <h2>INTERACTIVE CHESS BOARD</h2>
+          <p>The Interactive Chess Board is a game that plays chess. It features a 3D printed robotic arm that reaches down with a solenoid and utilizes the  magnetic field of the solenoid coil to transfer the chess piece around the board. The chess pieces contain ferromagnetic material at the core - iron fillings- which responds to the magnetism. The magnetic field opens a new side to this project, while creating a release mechanism. The project is at the preliminary stages with multiple options to take in the future. Whether it be a coded robotic arm to decide its own moves with AI abilities or a panel control of the robotic arm. The continuation of the project will transfer into the next modules for an innovative experience.</p>
+        </div>
+    </div>
+    <div class="pageNav">
       <p style="text-align:left;">
         <a href="/index.html">Back to Work</a>
         <span style="float:right;">
@@ -53,7 +49,15 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/interactiveChess/photo1.jpg','/images/interactiveChess/photo2.jpg','/images/interactiveChess/photo3.jpg',
+      '/images/interactiveChess/photo4.jpg','/images/interactiveChess/photo5.png','/images/interactiveChess/photo6.jpg','/images/interactiveChess/photo7.jpg','/images/interactiveChess/photo8.JPG'];
     
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
 
   </body>
 </html>

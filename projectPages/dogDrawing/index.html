@@ -19,74 +19,89 @@
   </head>
   <body onload="highlightActive()">
     <header-component></header-component>
-    <div class="page">
-      <div class="area">
-        <div class="container">
-            <div class="left-half">
-              <img class="projPhoto" src="/images/dogDrawing/photo1.JPG">
-              <img class="projPhoto" src="/images/dogDrawing/photo2.PNG">
-              <p>A working prototype of the project</p>
-              <img class="projPhoto" src="/images/dogDrawing/photo3.jpg">
-              <br><br>
-              <b>Wiring & Code</b>
-              <p>
-                import processing.serial*;<br>
-                <br>
-                Serial port;<br>
-                float ball = 0;<br>
-                <br>
-                void setup() {<br>
-                  &emsp;size (1000, 1000);<br>
-                  &emsp;port = new Serial(this,"/dev/cu.usbmodem1431", 9600);<br>
-                  &emsp;port.bufferUntil('\n');<br>
-                }<br>
-                <br>
-                void draw(){<br>
-                    &emsp;if (ball > 100 && ball &lt; 200){
-                      &emsp;&emsp;stroke(0, 250, 50);<br>
-                      &emsp;&emsp;fill(0, 150, 200);<br>
-                      &emsp;&emsp;strokeWeight(20);<br>
-                      &emsp;&emsp;line(mouseX, mouseY, pmouseX, pmouseY);<br>
-                    &emsp;} else if (ball > 200 && ball &lt; 500){
-                      &emsp;&emsp;stroke(0, 200, 200);<br>
-                      &emsp;&emsp;fill(0, 150, 200);<br>
-                      &emsp;&emsp;strokeWeight(33);<br>
-                      &emsp;&emsp;line(mouseX, mouseY, pmouseX, pmouseY);<br>
-                    &emsp;} else if (ball > 500 && ball &lt; 800){
-                      &emsp;&emsp;stroke(200, 0,  200);<br>
-                      &emsp;&emsp;fill(0, 150, 200);<br>
-                      &emsp;&emsp;strokeWeight(50);<br>
-                      &emsp;&emsp;line(mouseX, mouseY, pmouseX, pmouseY);<br>
-                    &emsp;} else {<br>
-                      &emsp;&emsp;background(255);<br>
-                    &emsp;}<br>
-                    }<br>
-                    <br>
-                    void serialEvent (Serial port){<br>
-                      &emsp;ball = float(port.readStringUntil('\n'));<br>
-                    }
-                </p>
+
+      <div class="container">
+          <div class="column">
+              <div class="galleryContainer">
+                <div class="image-container">
+                  <img class="projPhoto" id="galleryImage" src="/images/dogDrawing/photo1.JPG">
+                </div>
+                <div class="imageNavButtons">
+                  <button onclick="gallery.prevImage()">Previous</button>
+                  <button onclick="gallery.nextImage()" style="float:right;">Next</button>
+                </div>
+              </div>
+          </div>
+          <div class="column">
+            <h2>DOG DRAWING</h2>
+            <p><i>with Cambria Gosh</i></p>
+            <p>Dog Drawing started to develop an aspect of dog training outlook that could be used in everyday day life. This project will enable animals to draw on a computer through movements of walking. The choice of animal came from the amount of movement a dog makes daily and the obedient aspect of these animals. The computer will be able to sense whether the dog is sitting or standing from pressure on the sensors. His location will be located on the screen. This experience creates a beautiful image and a dog training aspect.</p>
+            <button type="button" class="collapsible">View the Code:</button>
+            <div class="codeBlock">
+              <pre>
+              <code>
+              import processing.serial*; 
+                
+              Serial port; 
+              float ball = 0; 
+                
+              void setup() { 
+                &emsp;size (1000, 1000); 
+                &emsp;port = new Serial(this,"/dev/cu.usbmodem1431", 9600); 
+                &emsp;port.bufferUntil('\n'); 
+              } 
+                
+              void draw(){ 
+                  &emsp;if (ball > 100 && ball &lt; 200){
+                    &emsp;&emsp;stroke(0, 250, 50); 
+                    &emsp;&emsp;fill(0, 150, 200); 
+                    &emsp;&emsp;strokeWeight(20); 
+                    &emsp;&emsp;line(mouseX, mouseY, pmouseX, pmouseY); 
+                  &emsp;} else if (ball > 200 && ball &lt; 500){
+                    &emsp;&emsp;stroke(0, 200, 200); 
+                    &emsp;&emsp;fill(0, 150, 200); 
+                    &emsp;&emsp;strokeWeight(33); 
+                    &emsp;&emsp;line(mouseX, mouseY, pmouseX, pmouseY); 
+                  &emsp;} else if (ball > 500 && ball &lt; 800){
+                    &emsp;&emsp;stroke(200, 0,  200); 
+                    &emsp;&emsp;fill(0, 150, 200); 
+                    &emsp;&emsp;strokeWeight(50); 
+                    &emsp;&emsp;line(mouseX, mouseY, pmouseX, pmouseY); 
+                  &emsp;} else { 
+                    &emsp;&emsp;background(255); 
+                  &emsp;} 
+                  } 
+                    
+                  void serialEvent (Serial port){ 
+                    &emsp;ball = float(port.readStringUntil('\n')); 
+                  }
+                </code>
+              </pre>
             </div>
-            <div class="right-half">
-              <h2>DOG DRAWING</h2>
-              <p><i>with Cambria Gosh</i></p>
-              <p>Dog Drawing started to develop an aspect of dog training outlook that could be used in everyday day life. This project will enable animals to draw on a computer through movements of walking. The choice of animal came from the amount of movement a dog makes daily and the obedient aspect of these animals. The computer will be able to sense whether the dog is sitting or standing from pressure on the sensors. His location will be located on the screen. This experience creates a beautiful image and a dog training aspect.</p>
-            </div>
-        </div>
+          </div>
+      </div>
+      <div class="pageNav">
+        <p style="text-align:left;">
+          <a href="/index.html">Back to Work</a>
+          <span style="float:right;">
+            <a href="/projectPages/mazeRacing/index.html">prev</a> / <a href="/projectPages/surfNTurf/index.html">next</a>
+          </span>
+        </p>
       </div>
     
-      <p style="text-align:left;">
-        <a href="/index.html">Back to Work</a>
-        <span style="float:right;">
-          <a href="/projectPages/mazeRacing/index.html">prev</a> / <a href="/projectPages/surfNTurf/index.html">next</a>
-        </span>
-      </p>
-    </div>
     <project-squares></project-squares>
-
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    
+    <script src="../projectPages.js"></script> 
+    <script>
+      // Array of image names
+      const images = ['/images/dogDrawing/photo1.JPG', '/images/dogDrawing/photo2.PNG', '/images/dogDrawing/photo3.jpg'];
+    
+      // Call setupGallery with the array of images
+      const gallery = setupGallery(images);
+    </script>
     
 
   </body>
